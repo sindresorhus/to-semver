@@ -57,7 +57,7 @@ Include prereleases, like `1.2.3-alpha.3`.
 Type: `boolean`<br>
 Default: `true`
 
-Clean release names, e.g. `v1.2.3` -> `1.3.0`.
+Clean versions. For example `v1.3.0` → `1.3.0`.
 
 
 ## Related

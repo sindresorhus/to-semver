@@ -52,6 +52,13 @@ Default: `true`
 
 Include prereleases, like `1.2.3-alpha.3`.
 
+##### clean
+
+Type: `boolean`<br>
+Default: `true`
+
+Clean release names, e.g. `v1.2.3` -> `1.3.0`.
+
 
 ## Related
 

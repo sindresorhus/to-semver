@@ -3,7 +3,8 @@ const semver = require('semver');
 
 module.exports = (versions, options) => {
 	options = Object.assign({
-		includePrereleases: true
+		includePrereleases: true,
+		clean: true
 	}, options);
 
 	let sortedVersions = versions.filter(x => semver.valid(x)).sort(semver.rcompare);
@@ -12,5 +13,9 @@ module.exports = (versions, options) => {
 		sortedVersions = sortedVersions.filter(x => semver.prerelease(x) === null);
 	}
 
-	return sortedVersions.map(x => semver.clean(x));
+	if (options.clean) {
+		sortedVersions = sortedVersions.map(x => semver.clean(x));
+	}
+
+	return sortedVersions;
 };

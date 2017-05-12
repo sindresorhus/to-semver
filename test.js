@@ -48,3 +48,23 @@ test('handles prerelease versions', t => {
 		'1.0.0'
 	]);
 });
+
+test('handles version cleaning', t => {
+	const versions = [
+		'v1.3.16',
+		'v1.6.8',
+		'v1.6.7'
+	];
+
+	t.deepEqual(m(versions), [
+		'1.6.8',
+		'1.6.7',
+		'1.3.16'
+	]);
+
+	t.deepEqual(m(versions, {clean: false}), [
+		'v1.6.8',
+		'v1.6.7',
+		'v1.3.16'
+	]);
+});

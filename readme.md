@@ -52,6 +52,13 @@ Default: `true`
 
 Include prereleases, like `1.2.3-alpha.3`.
 
+##### clean
+
+Type: `boolean`<br>
+Default: `true`
+
+Clean versions. For example `v1.3.0` → `1.3.0`.
+
 
 ## Related
 

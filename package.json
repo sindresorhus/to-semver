@@ -1,0 +1,48 @@
+{
+  "name": "to-semver",
+  "version": "0.0.0",
+  "description": "Get an array of valid, sorted, and cleaned semver versions from an array of strings",
+  "license": "MIT",
+  "repository": "sindresorhus/to-semver",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "semver",
+    "semantic",
+    "version",
+    "versions",
+    "versioning",
+    "list",
+    "array",
+    "clean",
+    "sort",
+    "cleaned",
+    "sorted",
+    "valid",
+    "validated",
+    "filter",
+    "filtered",
+    "git",
+    "tag",
+    "tags"
+  ],
+  "dependencies": {
+    "semver": "^5.3.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}

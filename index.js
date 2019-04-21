@@ -8,14 +8,14 @@ module.exports = (versions, options) => {
 		...options
 	};
 
-	let sortedVersions = versions.filter(x => semver.valid(x)).sort(semver.rcompare);
+	let sortedVersions = versions.filter(version => semver.valid(version)).sort(semver.rcompare);
 
 	if (!options.includePrereleases) {
-		sortedVersions = sortedVersions.filter(x => semver.prerelease(x) === null);
+		sortedVersions = sortedVersions.filter(version => semver.prerelease(version) === null);
 	}
 
 	if (options.clean) {
-		sortedVersions = sortedVersions.map(x => semver.clean(x));
+		sortedVersions = sortedVersions.map(version => semver.clean(version));
 	}
 
 	return sortedVersions;

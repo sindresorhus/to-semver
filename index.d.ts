@@ -17,7 +17,7 @@ declare namespace toSemver {
 }
 
 /**
-Get an array of valid, sorted, and cleaned [semver](http://semver.org/) versions from an array of strings.
+Get an array of valid, sorted, and cleaned [semver](https://semver.org/) versions from an array of strings.
 
 @example
 ```

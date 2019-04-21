@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from '.';
+import toSemver from '.';
 
 test('main', t => {
 	const versions = [
@@ -20,11 +20,11 @@ test('main', t => {
 		'1.3.15'
 	];
 
-	t.deepEqual(m(versions), expected);
+	t.deepEqual(toSemver(versions), expected);
 });
 
 test('no versions', t => {
-	t.deepEqual(m(['foo', 'bar']), []);
+	t.deepEqual(toSemver(['foo', 'bar']), []);
 });
 
 test('handles prerelease versions', t => {
@@ -35,14 +35,14 @@ test('handles prerelease versions', t => {
 		'1.0.0'
 	];
 
-	t.deepEqual(m(versions), [
+	t.deepEqual(toSemver(versions), [
 		'1.2.3-alpha.3',
 		'1.2.0',
 		'1.1.3',
 		'1.0.0'
 	]);
 
-	t.deepEqual(m(versions, {includePrereleases: false}), [
+	t.deepEqual(toSemver(versions, {includePrereleases: false}), [
 		'1.2.0',
 		'1.1.3',
 		'1.0.0'
@@ -56,13 +56,13 @@ test('handles version cleaning', t => {
 		'v1.6.7'
 	];
 
-	t.deepEqual(m(versions), [
+	t.deepEqual(toSemver(versions), [
 		'1.6.8',
 		'1.6.7',
 		'1.3.16'
 	]);
 
-	t.deepEqual(m(versions, {clean: false}), [
+	t.deepEqual(toSemver(versions, {clean: false}), [
 		'v1.6.8',
 		'v1.6.7',
 		'v1.3.16'

@@ -43,7 +43,7 @@ Type: `string[]`
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### includePrereleases
 

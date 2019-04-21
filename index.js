@@ -2,10 +2,11 @@
 const semver = require('semver');
 
 module.exports = (versions, options) => {
-	options = Object.assign({
+	options = {
 		includePrereleases: true,
-		clean: true
-	}, options);
+		clean: true,
+		...options
+	};
 
 	let sortedVersions = versions.filter(x => semver.valid(x)).sort(semver.rcompare);
 

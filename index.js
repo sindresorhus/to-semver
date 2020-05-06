@@ -1,5 +1,6 @@
 'use strict';
 const semver = require('semver');
+const cleanSemver = require('clean-semver');
 
 module.exports = (versions, options) => {
 	options = {
@@ -8,15 +9,19 @@ module.exports = (versions, options) => {
 		...options
 	};
 
-	let sortedVersions = versions.filter(version => semver.valid(version)).sort(semver.rcompare);
+	let sortedVersions = versions
+		.map(version => version.trim())
+		.map(version => [version, cleanSemver(version)])
+		.filter(version => version[1])
+		.sort((a, b) => semver.rcompare(a[1], b[1]));
 
 	if (!options.includePrereleases) {
-		sortedVersions = sortedVersions.filter(version => semver.prerelease(version) === null);
+		sortedVersions = sortedVersions.filter(version => semver.prerelease(version[1]) === null);
 	}
 
 	if (options.clean) {
-		sortedVersions = sortedVersions.map(version => semver.clean(version));
+		return sortedVersions.map(version => version[1]);
 	}
 
-	return sortedVersions;
+	return sortedVersions.map(([version]) => version);
 };

@@ -1,4 +1,4 @@
-# to-semver [![Build Status](https://travis-ci.org/sindresorhus/to-semver.svg?branch=master)](https://travis-ci.org/sindresorhus/to-semver)
+# to-semver
 
 > Get an array of valid, sorted, and cleaned [semver](https://semver.org) versions from an array of strings
 

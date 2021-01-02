@@ -1,16 +1,17 @@
 {
 	"name": "to-semver",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Get an array of valid, sorted, and cleaned semver versions from an array of strings",
 	"license": "MIT",
 	"repository": "sindresorhus/to-semver",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=8"
+		"node": ">=10"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -40,11 +41,12 @@
 		"tags"
 	],
 	"dependencies": {
-		"semver": "^6.0.0"
+		"clean-semver": "^2.1.0",
+		"semver": "^7.3.2"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"ava": "^2.4.0",
+		"tsd": "^0.11.0",
+		"xo": "^0.30.0"
 	}
 }

@@ -4,7 +4,6 @@
 
 Can be useful when you have an unsorted list of versions, like git tags, and want to use them as semver versions.
 
-
 ## Install
 
 ```
@@ -32,10 +31,9 @@ toSemver([
 */
 ```
 
-
 ## API
 
-### toSemver(versions, [options])
+### toSemver(versions, options?)
 
 #### versions
 
@@ -47,18 +45,17 @@ Type: `object`
 
 ##### includePrereleases
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Include prereleases, like `1.2.3-alpha.3`.
 
 ##### clean
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Clean versions. For example `v1.3.0` → `1.3.0`.
-
 
 ## Related
 
@@ -66,8 +63,3 @@ Clean versions. For example `v1.3.0` → `1.3.0`.
 - [semver-regex](https://github.com/sindresorhus/semver-regex) - Regular expression for matching semver versions
 - [semver-diff](https://github.com/sindresorhus/semver-diff) - Get the diff type of two semver versions: `0.0.1` `0.0.2` → `patch`
 - [semver-truncate](https://github.com/sindresorhus/semver-truncate) - Truncate a semver version: `1.2.3` → `1.2.0`
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

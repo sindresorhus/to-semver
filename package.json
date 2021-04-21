@@ -1,6 +1,6 @@
 {
 	"name": "to-semver",
-	"version": "3.0.0",
+	"version": "4.0.0",
 	"description": "Get an array of valid, sorted, and cleaned semver versions from an array of strings",
 	"license": "MIT",
 	"repository": "sindresorhus/to-semver",

@@ -1,5 +1,5 @@
 import test from 'ava';
-import toSemver from '.';
+import toSemver from './index.js';
 
 test('main', t => {
 	const versions = [

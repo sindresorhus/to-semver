@@ -1,27 +1,25 @@
-declare namespace toSemver {
-	interface Options {
-		/**
-		Include prereleases, like `1.2.3-alpha.3`.
+export interface Options {
+	/**
+	Include prereleases, like `1.2.3-alpha.3`.
 
-		@default true
-		*/
-		readonly includePrereleases?: boolean;
+	@default true
+	*/
+	readonly includePrereleases?: boolean;
 
-		/**
-		Clean versions. For example `v1.3.0` → `1.3.0`.
+	/**
+	Clean versions. For example, `v1.3.0` → `1.3.0`.
 
-		@default true
-		*/
-		readonly clean?: boolean;
-	}
+	@default true
+	*/
+	readonly clean?: boolean;
 }
 
 /**
-Get an array of valid, sorted, and cleaned [semver](https://semver.org/) versions from an array of strings.
+Get an array of valid, sorted, and cleaned [semver](https://semver.org) versions from an array of strings.
 
 @example
 ```
-import toSemver = require('to-semver');
+import toSemver from 'to-semver';
 
 toSemver([
 	'v1.3.16',
@@ -36,9 +34,4 @@ toSemver([
 // ]
 ```
 */
-declare function toSemver(
-	versions: readonly string[],
-	options?: toSemver.Options
-): string[];
-
-export = toSemver;
+export default function toSemver(versions: readonly string[], options?: Options): string[];

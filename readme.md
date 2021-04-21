@@ -10,11 +10,10 @@ Can be useful when you have an unsorted list of versions, like git tags, and wan
 $ npm install to-semver
 ```
 
-
 ## Usage
 
 ```js
-const toSemver = require('to-semver');
+import toSemver from 'to-semver';
 
 toSemver([
 	'v1.3.16',
@@ -55,7 +54,7 @@ Include prereleases, like `1.2.3-alpha.3`.
 Type: `boolean`\
 Default: `true`
 
-Clean versions. For example `v1.3.0` → `1.3.0`.
+Clean versions. For example, `v1.3.0` → `1.3.0`.
 
 ## Related
 

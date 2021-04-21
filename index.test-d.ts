@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import toSemver = require('.');
+import toSemver from './index.js';
 
 expectType<string[]>(toSemver(['v1.3.16', 'v1.7.0']));
 expectType<string[]>(
